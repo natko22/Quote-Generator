@@ -28,6 +28,15 @@ function newQuote() {
 console.log("QUOTE", quote);
 newQuote();
 
+// Tweet Quote
+function tweetQuote() {
+  const twitterUrl = `https://twitter.com/intent/tweet?text${quoteText.textContent} - ${authorText.textContent}`;
+  window.open(twitterUrl, "_blank");
+}
+
+// Event Listeners
+newQuoteBtn.addEventListener("click", newQuote);
+twitterBtn.addEventListener("click", tweetQuote);
 // let apiQuotes = [];
 
 // Get Quotes from API
